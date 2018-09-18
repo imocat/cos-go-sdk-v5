@@ -11,7 +11,7 @@
 #### 安装
 
 ```shell
-go get -u github.com/nelsonken/cos-go-sdk-v5/cos
+go get -u github.com/imocat/cos-go-sdk-v5/cos
 ```
 
 #### 使用
