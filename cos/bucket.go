@@ -55,7 +55,7 @@ func (b *Bucket) UploadObject(ctx context.Context, object string, content io.Rea
 }
 
 func (b *Bucket) CopyObject(ctx context.Context, src, dst string, acl *AccessControl) error {
-	srcURL := fmt.Sprintf("%s-%s.cos.%s.%s/%s", b.Name, b.conn.conf.AppID, b.conn.conf.Region, b.conn.conf.Domain, dst)
+	srcURL := fmt.Sprintf("%s.cos.%s.%s/%s", b.Name, b.conn.conf.Region, b.conn.conf.Domain, dst)
 	header := map[string]string{
 		"x-cos-source-url": srcURL,
 	}

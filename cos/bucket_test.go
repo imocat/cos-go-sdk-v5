@@ -10,7 +10,6 @@ var client *Client
 
 func setUp() {
 	client = New(&Option{
-		AppID:     "",
 		SecretID:  "",
 		SecretKey: "",
 		Region:    "",

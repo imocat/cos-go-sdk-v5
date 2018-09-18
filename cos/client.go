@@ -15,7 +15,6 @@ type Client struct {
 func New(o *Option) *Client {
 	client := Client{}
 	conf := getDefaultConf()
-	conf.AppID = o.AppID
 	conf.SecretID = o.SecretID
 	conf.SecretKey = o.SecretKey
 	conf.Region = o.Region

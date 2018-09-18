@@ -80,7 +80,7 @@ func getQueryStr(params map[string]interface{}) string {
 }
 
 func (conn *Conn) buildURL(bucket, object, queryStr string) string {
-	domain := fmt.Sprintf("%s-%s.cos.%s.%s", bucket, conn.conf.AppID, conn.conf.Region, conn.conf.Domain)
+	domain := fmt.Sprintf("%s.cos.%s.%s", bucket, conn.conf.Region, conn.conf.Domain)
 	url := fmt.Sprintf("http://%s/%s%s", domain, escape(object), queryStr)
 
 	return url
